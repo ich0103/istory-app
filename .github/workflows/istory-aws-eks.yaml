@@ -63,7 +63,7 @@ jobs:
             application:
               name: USER-SERVICE
             jwt:
-              issuer: ich0103@gmail.com
+              issuer: ich0103@naver.com
               secret_key: study-springboot
           management:
             endpoints:
@@ -124,10 +124,9 @@ jobs:
       - name: 12.서비스 리포지토리 변경사항 커밋 및 푸시
         run: |
           git config --global user.name 'ich0103'
-          git config --global user.email 'ich0103@gmail.com'
+          git config --global user.email 'ich0103@naver.com'
           git commit -am "Update image tag to ${{ env.DOCKER_TAG }}"
-          git remote set-url origin https://${{ secrets.PAT }}git@github.com:ich0103/istory-service.git
-          
+          git remote set-url origin https://${{ secrets.PAT }}@github.com/ich0103/istory-service.git
           git push origin main
 
 #1
