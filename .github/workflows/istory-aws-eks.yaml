@@ -120,16 +120,16 @@ jobs:
           # 변경된 내용 확인
           cat istory-app-deploy.yaml
       
-      # 변경사항 커밋 및 푸시
-      - name: 12.서비스 리포지토리 변경사항 커밋 및 푸시
-        run: |
-          git config --global user.name 'ich0103'
-          git config --global user.email 'ich0103@naver.com'
-          git commit -am "Update image tag to ${{ env.DOCKER_TAG }}"
-          git remote set-url origin https://${{ secrets.PAT }}@github.com/ich0103/istory-service.git
-          git push origin main
+#       # 변경사항 커밋 및 푸시
+#       - name: 12.서비스 리포지토리 변경사항 커밋 및 푸시
+#         run: |
+#           git config --global user.name 'ich0103'
+#           git config --global user.email 'ich0103@naver.com'
+#           git commit -am "Update image tag to ${{ env.DOCKER_TAG }}"
+#           git remote set-url origin https://${{ secrets.PAT }}@github.com/ich0103/istory-service.git
+#           git push origin main
 
-#1
-#2
-#3
-#4
+# #1
+# #2
+# #3
+# #4
