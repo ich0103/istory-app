@@ -63,7 +63,7 @@ jobs:
             application:
               name: USER-SERVICE
             jwt:
-              issuer: user@gmail.com
+              issuer: ich0103@naver.com
               secret_key: study-springboot
           management:
             endpoints:
@@ -104,7 +104,7 @@ jobs:
       - name: 10.서비스 리포지토리 체크아웃
         uses: actions/checkout@v4
         with:
-          repository: dangtong-s-inc/istory-service   # 바꾸기
+          repository: ich0103/istory-service   # 바꾸기
           ref: main # 바꾸기
           path: .
           token: ${{ secrets.PAT }} 
@@ -123,11 +123,11 @@ jobs:
       # 변경사항 커밋 및 푸시
       - name: 12.서비스 리포지토리 변경사항 커밋 및 푸시
         run: |
-          # git config --global user.name 'dangtong76' # 바꾸기
-          # git config --global user.email 'dangtong@gmail.com' # 바꾸기
+          # git config --global user.name 'ich0103' # 바꾸기
+          # git config --global user.email 'ich0103@naver.com' # 바꾸기
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git commit -am "Update image tag to ${{ env.DOCKER_TAG }}"
-          git remote set-url origin https://${{ secrets.PAT }}@github.com/dangtong-s-inc/istory-service.git # 바꾸기 
+          git remote set-url origin https://${{ secrets.PAT }}@github.com/ich0103/istory-service.git # 바꾸기 
           
           git push origin main
